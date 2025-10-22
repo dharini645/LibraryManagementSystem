@@ -1,0 +1,142 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 30px;
+}
+
+.container {
+    max-width: 850px;
+    width: 90%;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 20px 30px rgba(0,0,0,0.3);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientText 3s infinite alternate;
+}
+
+@keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+h2 {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Form section */
+.form-section {
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #fdfbfb, #ebedee);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.form-section:hover {
+    transform: scale(1.02);
+}
+
+input[type=text], select {
+    width: calc(33% - 12px);
+    padding: 12px;
+    margin: 5px 5px 5px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: box-shadow 0.3s ease;
+}
+
+input[type=text]:focus, select:focus {
+    outline: none;
+    box-shadow: 0px 0px 8px #66a6ff;
+    border-color: #66a6ff;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Book list */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    color: white;
+    font-weight: 500;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.02);
+    background: linear-gradient(135deg, #66a6ff, #89f7fe);
+}
+
+/* Message box */
+.message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.message.success {
+    background: linear-gradient(135deg, #d4edda, #a3e4c8);
+    color: #155724;
+}
+
+.message.error {
+    background: linear-gradient(135deg, #f8d7da, #f5a3a3);
+    color: #721c24;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    input[type=text], select, button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

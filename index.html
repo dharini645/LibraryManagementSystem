@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Login/Register Page -->
+        <div id="authPage">
+            <h1>📚 Library Portal</h1>
+            <div class="form-section">
+                <h2>Login</h2>
+                <input type="text" id="loginMemberId" placeholder="Enter Member ID">
+                <button onclick="login()">Login</button>
+            </div>
+
+            <div class="form-section">
+                <h2>Register</h2>
+                <input type="text" id="regMemberId" placeholder="Member ID">
+                <input type="text" id="regMemberName" placeholder="Member Name">
+                <button onclick="register()">Register</button>
+            </div>
+        </div>
+
+        <!-- Dashboard Page -->
+        <div id="dashboard" style="display:none;">
+            <h1>Welcome, <span id="memberNameDisplay"></span>!</h1>
+
+            <div class="form-section">
+                <h2>Borrow a Book</h2>
+                <select id="borrowSelect"></select>
+                <button onclick="borrowBook()">Borrow</button>
+            </div>
+
+            <div class="form-section">
+                <h2>Return a Book</h2>
+                <select id="returnSelect"></select>
+                <button onclick="returnBook()">Return</button>
+            </div>
+
+            <div class="form-section">
+    <h2>Add a Book</h2>
+    <input type="text" id="newBookId" placeholder="Book ID">
+    <input type="text" id="newBookTitle" placeholder="Book Title">
+    <input type="text" id="newBookAuthor" placeholder="Author Name">
+    <button onclick="addBookFromDashboard()">Add Book</button>
+</div>
+
+
+            <div class="form-section">
+                <h2>All Books</h2>
+                <ul id="bookList"></ul>
+                <button onclick="downloadBooks()">💾 Save Books to TXT</button>
+            </div>
+
+            <div class="form-section">
+                <button onclick="logout()">🚪 Logout</button>
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
